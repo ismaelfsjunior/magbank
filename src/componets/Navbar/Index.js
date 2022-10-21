@@ -1,7 +1,7 @@
 import React from "react";
 import { Container, Navbar, Nav, ButtonGroup, Button, NavDropdown} from "react-bootstrap";
-import './Navbar.scss';
-import logo from "../assets/logo.svg";
+import './Index.scss';
+import logo from "../../assets/logo.svg";
 
 const Navigation = () => (
     <Navbar variant="dark" expand="lg">
