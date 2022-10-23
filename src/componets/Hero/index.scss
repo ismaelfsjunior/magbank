@@ -1,10 +1,25 @@
 .hero {
-    background-image: url("../../assets/hero.jpg");
+    background-image: url("../../assets/hero-mobile.jpg");
     background-size: cover;
     background-position: center top;
-    height: 46.625rem;
+}
+
+@media screen and (min-width: 1280px) {
+    .hero {
+        background-image: url("../../assets/hero.jpg");
+        background-size: cover;
+        background-position: center top;       
+    }    
 }
 
 .row {
-    padding-top: 15.125rem;
+    padding-top: 5.5625rem;
+    padding-bottom: 4rem;
+}
+
+@media screen and (min-width: 1280px) {
+    .row {
+        padding-top: 15.125rem;
+        padding-bottom: 7rem;
+    } 
 }
