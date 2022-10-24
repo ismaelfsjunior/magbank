@@ -2,6 +2,7 @@ import React from "react";
 import Navbar from "./componets/Navbar/Index.js";
 import Hero from "./componets/Hero/index.js";
 import Main from "./componets/Main/index.js";
+import Institutional from "./componets/Institutional/index.js";
 import "./App.scss";
 
 const App = () => {
@@ -10,6 +11,7 @@ const App = () => {
       <Navbar />   
       <Hero />
       <Main />
+      <Institutional />
     </div>
   );
 }
