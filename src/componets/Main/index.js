@@ -30,7 +30,7 @@ const Main = () => (
                     <Image className="d-none d-lg-inline-block img--copy" src={cartao} />
                 </Col>                
             </Row>
-            <Row className="row-4-cards">
+            <Row>
                 <Col lg>
                     <Cards 
                         src={card01} 
