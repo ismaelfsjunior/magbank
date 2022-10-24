@@ -8,7 +8,7 @@ import "./index.scss";
 const Hero = () => (
     <Card className="text-center text-white hero">
         <Container>
-            <Row>
+            <Row className="row-2">
                 <Col lg className="text-lg-end my-lg-5">
                     <Image className="d-lg-none" src={logo} />
                     <Image className="d-none d-lg-inline-block" src={logoDesktop} />
