@@ -1,0 +1,32 @@
+.faq {
+    background-color: #443a50;
+}
+
+div.accordion {
+    --bs-accordion-bg: unset;
+    --bs-accordion-active-bg: #3b2e4a;
+    --bs-accordion-active-color: #fff;
+    --bs-accordion-color: #fff;
+    --bs-accordion-btn-bg: #3b2e4a;
+    --bs-accordion-border-color: unset;
+    --bs-accordion-btn-active-icon: unset;
+    --bs-accordion-btn-icon: unset;
+}
+
+.faq-h2 {
+    font-size: 2.2rem;
+    font-weight: 300;
+    line-height: 1.2rem;
+
+    @media screen and (min-width: 992px) {
+        font-size: 3.5rem;
+    }
+}
+
+.accordion-button {
+    color: #fff !important;
+}
+
+.faq-acordion {
+    cursor: pointer;
+}

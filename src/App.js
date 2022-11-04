@@ -3,6 +3,7 @@ import Navbar from "./componets/Navbar/Index.js";
 import Hero from "./componets/Hero/index.js";
 import Main from "./componets/Main/index.js";
 import Institutional from "./componets/Institutional/index.js";
+import Faq from "./componets/Faq/index.js";
 import "./App.scss";
 
 const App = () => {
@@ -12,6 +13,7 @@ const App = () => {
       <Hero />
       <Main />
       <Institutional />
+      <Faq />
     </div>
   );
 }
