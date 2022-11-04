@@ -4,6 +4,7 @@ import Hero from "./componets/Hero/index.js";
 import Main from "./componets/Main/index.js";
 import Institutional from "./componets/Institutional/index.js";
 import Faq from "./componets/Faq/index.js";
+import Footer from "./componets/Footer/index.js";
 import "./App.scss";
 
 const App = () => {
@@ -14,6 +15,7 @@ const App = () => {
       <Main />
       <Institutional />
       <Faq />
+      <Footer />
     </div>
   );
 }

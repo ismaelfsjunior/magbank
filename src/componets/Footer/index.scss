@@ -1,0 +1,12 @@
+@import "../Variables/index.scss";
+
+.footer {
+    border-bottom: 0.5rem solid $color-Secondary;
+}
+
+@media screen and (min-width: 920px) {
+    .footer {
+        border-bottom: 0.2rem solid $color-Secondary; 
+    }
+    
+}
