@@ -1,9 +1,12 @@
-import React from "react";
-import { Card, Col, Container, Row } from "react-bootstrap";
+import React, { useState } from "react";
+import { Card, Col, Container, Row, Button } from "react-bootstrap";
 import { FaMobile, FaMobileAlt, FaGlobe, FaShieldAlt } from "react-icons/fa";
+import AccoutModal from "../AccountModal";
 import "./index.scss";
 
-const Institutional = () => (
+const Institutional = () => {
+    const [showModal, setShowModal] = useState(false);
+    return(
     <Card className="institutional">
         <Container className="text-light my-lg-5">
             <Row>
@@ -15,11 +18,12 @@ const Institutional = () => (
                     <p className="my-4"><FaMobile className="fs-2" /> Simples e prático</p>
                     <p className="my-4"><FaGlobe className="fs-2" /> Abertura de conta 100% online</p>
                     <p className="my-4"><FaShieldAlt className="fs-2" /> Transaçoes mais seguras</p>
-                    <button className="btn btn-outline-light my-5" >Abra sua conta</button>
+                    <Button className="btn btn-outline-light my-5" onClick={() => setShowModal(true)} >Abra sua conta</Button>
                 </Col>
             </Row>
         </Container>
+        <AccoutModal show={showModal} handleClose={() => setShowModal(false)}/>
     </Card>
-);
+)};
 
 export default Institutional;

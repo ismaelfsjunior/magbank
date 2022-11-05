@@ -1,6 +1,7 @@
-import React from "react";
+import React, { useState }  from "react";
 import { Card, Container, Button, Row, Col, Image } from "react-bootstrap";
 import { FaCreditCard, FaShoppingCart, FaWallet, FaMobile } from "react-icons/fa";
+import AccoutModal from "../AccountModal";
 import cartao from "../../assets/cartao.png";
 import card01 from "../../assets/card01.jpg";
 import card02 from "../../assets/card02.jpg";
@@ -8,7 +9,9 @@ import card03 from "../../assets/card03.jpg";
 import Cards from "../Card/index.js";
 import "./index.scss";
 
-const Main = () => (
+const Main = () => {
+    const [showModal, setShowModal] = useState(false);
+    return(
     <Card>
         <Container>
             <Row className="row-3">
@@ -54,10 +57,11 @@ const Main = () => (
                 </Col>                
             </Row>
             <div className="text-center">
-                <Button type="button" className="btn main-btn btn-primary">Abra sua conta</Button>
+                <Button type="button" className="btn main-btn btn-primary" onClick={() => setShowModal(true)}>Abra sua conta</Button>
             </div>
         </Container>
+        <AccoutModal show={showModal} handleClose={() => setShowModal(false)}/>
     </Card>     
-);
+)};
 
 export default Main;

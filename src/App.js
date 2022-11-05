@@ -8,6 +8,7 @@ import Footer from "./componets/Footer/index.js";
 import "./App.scss";
 
 const App = () => {
+
   return (
     <div className="App">
       <Navbar />   
