@@ -1,9 +1,12 @@
-import React from "react";
+import React, { useState } from "react";
 import { Container, Navbar, Nav, ButtonGroup, Button, NavDropdown} from "react-bootstrap";
+import AccoutModal from "../AccountModal";
 import './Index.scss';
 import logo from "../../assets/logo.svg";
 
-const Navigation = () => (
+const Navigation = () => {
+    const [showModal, setShowModal] = useState(false);
+    return(
     <Navbar variant="dark" expand="lg">
         <Container>
             <Navbar.Brand href="#home">
@@ -28,11 +31,12 @@ const Navigation = () => (
                             <NavDropdown.Item href="conta">Conta</NavDropdown.Item>
                         </NavDropdown>
                     </Button>
-                    <Button variant="outline-light">abra sua conta</Button>
+                    <Button variant="outline-light" onClick={() => setShowModal(true)}>abra sua conta</Button>
                 </ButtonGroup>
             </Navbar.Collapse>
         </Container>
+        <AccoutModal show={showModal} handleClose={() => setShowModal(false)}/>
     </Navbar>    
-);
+)};
 
 export default Navigation;

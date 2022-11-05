@@ -1,0 +1,19 @@
+@import '../Variables/index.scss';
+
+.modal-title {
+    color: $color-primary;
+    font-size: 1.5rem !important;
+    font-weight: 700 !important;   
+};
+
+.modal-bnt {
+    background-color: $color-primary !important;
+    border-color: $color-primary !important;
+}
+
+.modal-checkbox {
+    opacity: 0.502;
+    font-size: 0.875rem;
+    color: #444444;
+    font-family: "Helvetica Neue";    
+}
