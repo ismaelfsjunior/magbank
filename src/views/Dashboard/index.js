@@ -5,7 +5,17 @@ import { RiCheckboxBlankCircleFill } from 'react-icons/ri';
 import './index.scss';
 
 const Dashboard = () => {
-
+    const latest = [
+        {date: '22/07', description: 'SAQUE 24H 012345', value: '300,00'},
+        {date: '21/07', description: 'SUPERMERCADO 2312332', value: '275,90'},
+        {date: '21/07', description: 'ESTACIONAMENTO 123234', value: '12,00'},
+        {date: '21/07', description: 'PAGAMENTO ALUGUEL 123432', value: '1.300,00'},
+    ];
+    const future = [
+        {date: '25/07', description: 'NETFLIX', value: '25,00'},
+        {date: '26/07', description: 'CESTA BASICA', value: '15,90'},
+        {date: '28/07', description: 'CONSORCIO', value: '600,00'},
+    ];    
     return(
         <Container className="dashboard py-5">
             <Row>
@@ -54,38 +64,40 @@ const Dashboard = () => {
                     justify 
                     >
                         <Tab eventKey="latest" title="Últimos lançamentos" >
-                            <Table striped bordered hover>
+                            <Table striped borderless hover>
                                 <tbody>
                                     <tr className="fw-bold">
                                     <td>Data</td>
                                     <td>Descrição</td>
                                     <td>Valor(R$)</td>
-                                    </tr>                                    
-                                    <tr>
-                                    <td>22/07</td>
-                                    <td>SAQUE 24H 012345</td>
-                                    <td className="fw-bold">300,00</td>
-                                    </tr>
-                                    <tr>
-                                    <td>21/07</td>
-                                    <td>SUPERMERCADO 2312332</td>
-                                    <td className="fw-bold">275,90</td>
-                                    </tr>
-                                    <tr>
-                                    <td>21/07</td>
-                                    <td>ESTACIONAMENTO 123234</td>
-                                    <td className="fw-bold">12,00</td>
-                                    </tr>
-                                    <tr>
-                                    <td>21/07</td>
-                                    <td>PAGAMENTO ALUGUEL 123432</td>
-                                    <td className="fw-bold">1.500,00</td>
-                                    </tr>
+                                    </tr>  
+                                    {latest.map(({date, description, value}) => (
+                                        <tr>
+                                        <td>{date}</td>
+                                        <td>{description}</td>
+                                        <td className="fw-bold">{value}</td>
+                                        </tr>
+                                    ))}
                                 </tbody>
                             </Table>                                            
                         </Tab>
                         <Tab eventKey="future" title="Lançamentos futuros">
-                            
+                        <Table striped borderless hover>
+                                <tbody>
+                                    <tr className="fw-bold">
+                                    <td>Data</td>
+                                    <td>Descrição</td>
+                                    <td>Valor(R$)</td>
+                                    </tr>  
+                                    {future.map(({date, description, value}) => (
+                                        <tr>
+                                        <td>{date}</td>
+                                        <td>{description}</td>
+                                        <td className="fw-bold">{value}</td>
+                                        </tr>
+                                    ))}
+                                </tbody>
+                            </Table>                            
                         </Tab>
                     </Tabs>                    
                 </Col>
